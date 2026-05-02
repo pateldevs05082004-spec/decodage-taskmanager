@@ -2,6 +2,8 @@
 
 **Deploy your Decode Age Task Manager in 15 minutes - 100% FREE!**
 
+**Latest Update:** Build configuration optimized for Vercel deployment.
+
 ---
 
 ## ⚡ Quick Start
