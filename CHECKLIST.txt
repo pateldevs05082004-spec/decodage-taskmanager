@@ -1,0 +1,57 @@
+═══════════════════════════════════════════════════════════
+  DECODE AGE TASK MANAGER - SETUP CHECKLIST
+═══════════════════════════════════════════════════════════
+
+PREREQUISITES:
+□ PostgreSQL installed (https://www.postgresql.org/download/windows/)
+□ Node.js installed (already have it ✓)
+□ Terminal/Command Prompt open
+
+SETUP STEPS:
+□ Step 1: Run setup-database.bat
+□ Step 2: Wait for migrations to complete
+□ Step 3: Run start-all.bat
+□ Step 4: Wait for both servers to start
+
+VERIFICATION:
+□ Backend running on http://localhost:5000
+□ Frontend running on http://localhost:5173
+□ No errors in terminal windows
+
+TESTING:
+□ Open browser: http://localhost:5173
+□ Login: pdev444444@gmail.com / admin123
+□ See Admin Panel
+□ Click "Add User"
+□ Create test employee
+□ Logout
+□ Login as employee
+□ See Employee Dashboard
+
+SUCCESS! ✓
+
+═══════════════════════════════════════════════════════════
+
+QUICK COMMANDS:
+
+Setup:     setup-database.bat
+Start:     start-all.bat
+Backend:   start-backend.bat
+Frontend:  start-frontend.bat
+
+═══════════════════════════════════════════════════════════
+
+CREDENTIALS:
+
+Admin:
+  Email:    pdev444444@gmail.com
+  Password: admin123
+
+═══════════════════════════════════════════════════════════
+
+HELP:
+- Read START_HERE.md for detailed instructions
+- Read TESTING_GUIDE.md for test scenarios
+- Read README_SIMPLE.md for quick overview
+
+═══════════════════════════════════════════════════════════

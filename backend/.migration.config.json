@@ -1,0 +1,17 @@
+{
+  "database-url": {
+    "env": "DATABASE_URL"
+  },
+  "migrations-dir": "migrations",
+  "dir": "migrations",
+  "direction": "up",
+  "count": 1,
+  "migration-file-language": "js",
+  "ignore-pattern": "\\..*",
+  "schema": "public",
+  "decamelize": false,
+  "create-schema": true,
+  "single-transaction": true,
+  "check-order": true,
+  "verbose": true
+}
