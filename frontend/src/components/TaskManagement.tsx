@@ -57,7 +57,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/tasks', {
+      const response = await fetch('/api/tasks', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -74,7 +74,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/users', {
+      const response = await fetch('/api/auth/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -92,7 +92,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
 
   const fetchStats = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/tasks/stats', {
+      const response = await fetch('/api/tasks/stats', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -113,7 +113,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/tasks', {
+      const response = await fetch('/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
     setSuccess('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/tasks/${editingTask.id}`, {
+      const response = await fetch(`/api/tasks/${editingTask.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
     try {
       const newStatus = currentStatus === 'complete' ? 'incomplete' : 'complete';
 
-      const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+      const response = await fetch(`/api/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -209,7 +209,7 @@ export default function TaskManagement({ token, currentUser }: TaskManagementPro
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+      const response = await fetch(`/api/tasks/${taskId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

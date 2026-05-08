@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import TaskManagement from './TaskManagement';
+import { apiUrl } from '../config/api';
 
 interface User {
   id: string;
@@ -33,7 +34,7 @@ export default function AdminPanel({ token, currentUser, onLogout }: AdminPanelP
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/users', {
+      const response = await fetch('/api/auth/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -54,7 +55,7 @@ export default function AdminPanel({ token, currentUser, onLogout }: AdminPanelP
     setSuccess('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/users', {
+      const response = await fetch('/api/auth/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +86,7 @@ export default function AdminPanel({ token, currentUser, onLogout }: AdminPanelP
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/users/${userId}`, {
+      const response = await fetch(`/api/auth/users/${userId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

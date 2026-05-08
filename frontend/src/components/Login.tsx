@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { theme } from '../styles/theme';
+import { apiUrl } from '../config/api';
 
 interface LoginProps {
   onLogin: (token: string, user: any) => void;
@@ -17,7 +18,7 @@ export default function Login({ onLogin }: LoginProps) {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(apiUrl('/auth/login'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
