@@ -1,0 +1,6 @@
+backend
+api
+node_modules
+.git
+*.md
+!frontend
